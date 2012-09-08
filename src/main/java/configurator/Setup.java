@@ -52,25 +52,28 @@ public class Setup{
             msg.append("`                                                                       `\n");
             msg.append("`                                                                       `\n");            
             msg.append("` WARNING! Missing configuration settings! Create a file in this        `\n");
-            msg.append("' location with the name 'configurator.settings'.                       `\n");
+            msg.append("' location with the name 'configurator.properties'.                      `\n");
             msg.append("`````````````````````````````````````````````````````````````````````````\n");
             println( msg.toString() );
             
             System.exit( 0 );
         }
         
-        settings = new Properties();
-        settings.load( new FileInputStream( settingsFile ) );
+        environment = new Properties();
+        environment.load( new FileInputStream(settingsFile) )
         
-        String server = settings.getProperty("server");
-        String version = settings.getProperty("version");
+        //settings = new Properties();
+        //settings.load( new FileInputStream( settingsFile ) );
+        
+        //String server = settings.getProperty("server");
+        //String version = settings.getProperty("version");
         //String playExe = settings.getProperty("pathToPlay");    
         
-        if( server==null || version == null ){
-            throw new Exception("Missing properties in the configurator.properties file.");
-        }
+        //if( server==null || version == null ){
+          ///  throw new Exception("Missing properties in the configurator.properties file.");
+        //}
         
-        readEnvironment(server, version);
+        //readEnvironment(server, version);
             
     }
     
