@@ -60,7 +60,7 @@ public class Setup{
         }
         
         environment = new Properties();
-        environment.load( new FileInputStream(settingsFile) )
+        environment.load( new FileInputStream(settingsFile) );
         
         //settings = new Properties();
         //settings.load( new FileInputStream( settingsFile ) );
