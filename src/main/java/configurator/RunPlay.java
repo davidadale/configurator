@@ -8,9 +8,9 @@ import static configurator.Helper.*;
 
 public class RunPlay{
     
-    public static void main(String[] args) throws Exception{
-        
-        Setup.readPlaySettings();
+
+    public RunPlay() throws Exception{
+        //Setup.readPlaySettings();
         
         ProcessBuilder pb = new ProcessBuilder( "play" , "run" );
         pb.redirectErrorStream( true );
@@ -29,8 +29,11 @@ public class RunPlay{
         while( (line = bri.readLine()) != null ){
             println( line );
         }
-        bri.close();
-        
+        bri.close();        
+    }
+
+    public static void main(String[] args) throws Exception{
+        new RunPlay();
     }
     
 }

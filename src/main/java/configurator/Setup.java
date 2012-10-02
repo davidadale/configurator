@@ -40,9 +40,16 @@ public class Setup{
         
         readEnvironment(server,version);        
     }
+
+    public static void readSettings()throws Exception{
+        File settingsFile = new File( new File("."), "configurator.properties");
+        environment = new Properties();
+        environment.load( new FileInputStream(settingsFile) );        
+    }
     
     
     protected static void readPlaySettings() throws Exception{
+
         File settingsFile = new File( new File("."), "configurator.properties");
         
         if( !settingsFile.exists() ){

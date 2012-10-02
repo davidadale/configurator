@@ -1,1 +1,11 @@
 apply plugin:'java'
+
+
+task deployJar(type: Copy) {
+    from 'build/libs/'
+    into '/Users/daviddale/bin'
+}
+
+jar {
+	manifest { attributes 'Main-Class': 'configurator.Main' }
+}
