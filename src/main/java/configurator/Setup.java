@@ -11,7 +11,7 @@ public class Setup{
     public static Properties settings;
     
     protected static void readTomcatSettings() throws Exception{
-        File settingsFile = new File( new File("."), "configurator.properties");
+        File settingsFile = new File( new File("."), "app.config");
         
         if( !settingsFile.exists() ){
             StringBuilder msg = new StringBuilder();
@@ -42,7 +42,7 @@ public class Setup{
     }
 
     public static void readSettings()throws Exception{
-        File settingsFile = new File( new File("."), "configurator.properties");
+        File settingsFile = new File( new File("."), "app.config");
         environment = new Properties();
         environment.load( new FileInputStream(settingsFile) );        
     }
@@ -50,7 +50,7 @@ public class Setup{
     
     protected static void readPlaySettings() throws Exception{
 
-        File settingsFile = new File( new File("."), "configurator.properties");
+        File settingsFile = new File( new File("."), "app.config");
         
         if( !settingsFile.exists() ){
             StringBuilder msg = new StringBuilder();

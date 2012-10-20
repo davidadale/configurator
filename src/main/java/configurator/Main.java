@@ -4,10 +4,9 @@ public class Main{
 
 	public static void main(String[] args)throws Exception{
 		Setup.readSettings();
-		String runtime = Setup.environment.getProperty("runtime");
-		if("play".equals( runtime ) ){
-			new RunPlay();
-		}
+		String command = Setup.environment.getProperty("command");
+		GenericRunner runner = new GenericRunner( command );
+		runner.start();
 	}
 
 }
