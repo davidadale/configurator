@@ -2,7 +2,7 @@ apply plugin:'java'
 
 
 task deployJar(type: Copy) {
-    from 'build/libs/'
+    from 'build/install/configurator'
     into '/Users/daviddale/bin'
 }
 
