@@ -1,5 +1,5 @@
 apply plugin:'java'
-
+apply plugin:'application'
 
 task deployJar(type: Copy) {
     from 'build/install/configurator'
@@ -9,3 +9,5 @@ task deployJar(type: Copy) {
 jar {
 	manifest { attributes 'Main-Class': 'configurator.Main' }
 }
+
+mainClassName="configurator.Main"
